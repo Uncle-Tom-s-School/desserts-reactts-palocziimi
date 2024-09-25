@@ -9,10 +9,71 @@
   --Rose900: hsl(14, 65%, 9%);
 
   color: var(--Rose900);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.cards-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  width: 95%;
+  margin: auto;
+  gap: 20px;
+}
+
+.dessert-card {
+  color: var(--Rose900) !important;
+  &>img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  &h3>{
+    color: red;
+  }
+}
+
+.add-btn {
+  --height : 55px;
+  height: var(--height);
+  aspect-ratio: 3;
+  border: 1px solid var(--Red);
+  border-radius: calc(var(--height) /2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: white;
+}
+
+.used {
+  justify-content: space-between;
+  padding: 0px 10px;
+  background-color: var(--Red);
+  color: white;
+  &>button {
+    height: calc(var(--height) - 20px);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+  }
+  
+}
+
+.dessert-card>.add-btn {
+  position: relative;
+  top: calc(var(--height) /2 * -1);
+  left: 50%;
+  transform: translate(-50%);
 }
