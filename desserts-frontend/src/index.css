@@ -38,6 +38,14 @@
   &h3>{
     color: red;
   }
+  & h2 {
+    color: var(--Rose900);
+    font-size: 1.2rem;
+  }
+  & h4 {
+    color: var(--Rose400);
+    font-weight: normal;
+  }
 }
 
 .add-btn {
@@ -52,6 +60,7 @@
   cursor: pointer;
   font-weight: bold;
   background-color: white;
+  transition: 0.3s;
 }
 
 .used {
@@ -59,6 +68,7 @@
   padding: 0px 10px;
   background-color: var(--Red);
   color: white;
+  transition: 0.3s;
   &>button {
     height: calc(var(--height) - 20px);
     border-radius: 50%;
@@ -76,4 +86,8 @@
   top: calc(var(--height) /2 * -1);
   left: 50%;
   transform: translate(-50%);
+}
+
+.dessert-card:has(.used)>img {
+  border: 2px solid var(--Red);
 }
